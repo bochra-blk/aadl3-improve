@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f9fc; 
+    direction: rtl;/* Light background for printing */
+}
+
+.receipt-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+.registration-details {
+    margin-top: 20px;
+}
+
+.registration-details p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+.footer button {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    font-size: 14px; /* Set the font size */
+    padding: 5px 10px; /* Adjust padding for smaller button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #00ff556c; /* Button background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer button:hover {
+    background-color: #144d3091; /* Darker shade on hover */
+}
+
+.button-icon {
+    height: 20px; /* Set height for the image */
+    width: 20px; /* Set width for the image */
+    margin-right: 5px; /* Space between the image and text */
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AADL3 2024</title>
+    <link rel="stylesheet" href="ihm2.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <video autoplay loop muted>
+            <source src="7043713-uhd_2560_1440_30fps.mp4" type="video/mp4">
+        </video>
+        
+        <section class="header-log">
+            <img src="AADL_logo.png" alt="aadl">
+            <div id="menu-btn" class="fas fa-bars"></div>
+         </section>
+         <h1>  الوكالة الوطنية لتحسين السكن وتطويره</h1>
+    </header>
+   
+    <div class="form-container">
+        <div id="form1" class="container" style="display: block;">
+        <h1 class="form_title">التسجيل</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="username">رقم التعريف الوطني</label>
+                <input class="input-field" type="text" id="username" name="username" required placeholder="ادخل رقم التعريف الوطني" maxlength="18">
+                <span class="error-message" id="username-error"></span>
+            </div>
+            <div id="photo-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="close-photo1">&times;</span>
+                    <img id="modal-image" src="id.jpg" alt="Photo" style="width: 50%;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">رقم الضمان الاجتماعي</label>
+                <input class="input-field" type="text" id="name" name="name" required placeholder="ادخل رقم الضمان الاجتماعي" maxlength="12">
+                <span class="error-message" id="name-error"></span>
+            </div>
+            <div id="photo-modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="close-photo2">&times;</span>
+                    <img id="modal-image2" src="chifaa.jpg" alt="Photo" style="width: 50%;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="wilaya">الولاية :</label>
+                <select id="wilaya" name="wilaya" required>
+                    <option value="" disabled selected>اختر الولاية</option>
+                    <option value="01">أدرار</option>
+                    <option value="02">الشلف</option>
+                    <option value="03">البليدة</option>
+                    <option value="04">البيض</option>
+                    <option value="05">البويرة</option>
+                    <option value="06">تلمسان</option>
+                    <option value="07">تيزي وزو</option>
+                    <option value="08">الجلفة</option>
+                    <option value="09">سوق أهراس</option>
+                    <option value="10">بسكرة</option>
+                    <option value="11">المسيلة</option>
+                    <option value="12">معسكر</option>
+                    <option value="13">وهران</option>
+                    <option value="14">المدية</option>
+                    <option value="15">الطارف</option>
+                    <option value="16">تيسمسيلت</option>
+                    <option value="17">الجزائر</option>
+                    <option value="18">خنشلة</option>
+                    <option value="19">تبسة</option>
+                    <option value="20">بسكرة</option>
+                    <option value="21">البرج بوعريريج</option>
+                    <option value="22">سطيف</option>
+                    <option value="23">جيجل</option>
+                    <option value="24">سكيكدة</option>
+                    <option value="25">مستغانم</option>
+                    <option value="26">وادي سوف</option>
+                    <option value="27">عين تموشنت</option>
+                    <option value="28">النعامة</option>
+                    <option value="29">غليزان</option>
+                    <option value="30">تندوف</option>
+                    <option value="31">الطارف</option>
+                    <option value="32">تيسمسيلت</option>
+                    <option value="33">الجزائر</option>
+                    <option value="34">بجاية</option>
+                    <option value="35">الشلف</option>
+                    <option value="36">تلمسان</option>
+                    <option value="37">سيدي بلعباس</option>
+                    <option value="38">عين الدفلى</option>
+                    <option value="39">البويرة</option>
+                    <option value="40">سعيدة</option>
+                    <option value="41">أم البواقي</option>
+                    <option value="42">سيدي بلعباس</option>
+                </select>
+                <span class="error-message" id="wilaya-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="operator">رقم الهاتف</label>
+                <select name="operator" id="operator" required>
+                    <option value="" disabled selected>اختر المشغل</option>
+                    <option value="06">Mobilis</option>
+                    <option value="07">Djezzy</option>
+                    <option value="05">Ooredoo</option>
+                </select>
+                
+                <label for="phone" style="display: block; margin-top: 10px;">رقم الهاتف المحمول:</label>
+                <input class="input-field" type="text" id="phone" name="phone" required placeholder="ادخل رقم الهاتف المحمول" maxlength="10" pattern="\d{10}" title="رقم الهاتف يجب أن يحتوي على 10 أرقام فقط.">
+                
+                <span class="error-message" id="phone-error"></span>
+            </div>
+
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms"> <button  class ="button1" type="button" id="terms-button">عرض الشروط</button></label>
+            </div>
+            
+            <!-- Modal for Terms and Conditions -->
+            <div id="terms-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="close-terms">&times;</span>
+                    <h2>شروط وأحكام الموقع</h2>
+                    <p>
+                        الشروط والأحكام الخاصة بالتسجيل في موقع شركة AADL للإقامات
+
+مقدمة: ترحب شركة AADL بجميع المواطنين الراغبين في الاستفادة من خدمات الشركة المتعلقة بتوزيع الكهرباء والغاز في الإقامات السكنية. يوفر الموقع الإلكتروني لشركة AADL منصة للتسجيل في الإقامات السكنية بغرض تيسير الحصول على هذه الخدمات. يشمل التسجيل كافة المراحل المتعلقة بتقديم طلبات ربط الكهرباء والغاز وكذلك تحديث البيانات الخاصة بالإقامات.
+
+شروط التسجيل:
+
+يجب أن يكون المتقدم للتسجيل هو مالك الإقامة أو شخص مفوض من قبله (مثل وكيل قانوني) لتقديم الطلب نيابة عنه.
+عند التسجيل، يجب أن تكون جميع البيانات المدخلة دقيقة وصحيحة، بما في ذلك معلومات الإقامة، مثل العنوان الكامل ورقم الهاتف.
+يجب أن يكون المتقدم قد استوفى جميع الإجراءات القانونية المطلوبة للحصول على الخدمات، مثل تقديم الوثائق الضرورية (بطاقة الهوية، عقد ملكية الإقامة، إلخ).
+البيانات المطلوبة:
+
+عند التسجيل، يجب على المستخدم تقديم البيانات الشخصية المطلوبة، مثل الاسم الكامل، رقم الهاتف، عنوان الإقامة، ورقم البطاقة الوطنية أو وثائق إثبات ملكية الإقامة.
+يتعين على المستخدم إرفاق المستندات اللازمة مثل نسخة من عقد ملكية الإقامة أو وثيقة تأكيد العنوان، والتي يتم طلبها من خلال الموقع.
+مراجعة الطلبات:
+
+بعد إتمام التسجيل وتقديم الوثائق، تقوم شركة AADL بمراجعة طلب التسجيل والتأكد من صحة المعلومات.
+في حال قبول الطلب، سيتم إرسال إشعار للمستخدم عبر البريد الإلكتروني أو الرسائل القصيرة (SMS) مع تفاصيل حول إجراءات الربط والوقت المتوقع.
+إجراءات الدفع:
+
+في حال تم قبول طلب التسجيل وتقديم الخدمة، يجب على المستخدم دفع الرسوم المتعلقة بالتسجيل في خدمات الكهرباء والغاز وفقًا للخطط التي تحددها الشركة.
+يلتزم المستخدم بدفع جميع الفواتير المستحقة بشكل دوري لتجنب انقطاع الخدمة.
+السرية وحماية البيانات:
+
+تلتزم شركة AADL بالحفاظ على سرية جميع البيانات الشخصية المقدمة من المستخدمين. يتم استخدام هذه البيانات فقط لأغراض تقديم خدمات الكهرباء والغاز والإجراءات المرتبطة بها.
+يتم تخزين البيانات الشخصية وفقًا للقوانين الجزائرية المتعلقة بحماية الخصوصية وحماية البيانات.
+التزامات المستخدم:
+
+يجب على المستخدم تحديث بياناته بشكل دوري على الموقع في حال حدوث أي تغيير (مثل تغيير العنوان أو رقم الهاتف).
+في حال حدوث أي مشكلة تتعلق بالخدمة، يجب على المستخدم التواصل مع دعم العملاء عبر الوسائل المتاحة على الموقع أو عبر الهاتف.
+إلغاء أو تعديل الطلب:
+
+يمكن للمستخدم تعديل أو إلغاء طلبه في أي وقت قبل أن يتم تنفيذ الخدمة الفعلية.
+في حال كان هناك أي خطأ في تقديم البيانات أو المستندات، يتعين على المستخدم تعديلها فورًا لإتمام عملية التسجيل بشكل صحيح.
+حقوق الشركة:
+
+يحق لشركة AADL رفض أو إلغاء أي طلب تسجيل إذا تبين أن البيانات المقدمة غير صحيحة أو غير مكتملة.
+كما يحق للشركة تعديل شروط التسجيل أو الإجراءات المتعلقة بها في أي وقت، على أن يتم إشعار المستخدمين بأي تغييرات عبر الموقع.
+الاختصاص القضائي:
+
+تخضع هذه الشروط والأحكام للقوانين السارية في الجزائر. في حال حدوث أي نزاع بين المستخدم والشركة، سيكون من اختصاص المحاكم الجزائرية
+                    </p>
+                    <button id="accept-terms">أوافق</button>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button" onclick="showForm2()">متابعة</button>
+        </form>
+    
+        <p class="notification" id="notification"></p>
+    </div>
+    <div id="form2" class="container" >
+        <h1 class="form_title">التاكد من المعلومات</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="username">رقم التعريف الوطني</label>
+                <input class="input-field" type="text" id="username" name="username" required placeholder="ادخل رقم التعريف الوطني" maxlength="18">
+                <span class="error-message" id="username-error"></span>
+            </div>
+            <div id="photo-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="close-photo1">&times;</span>
+                    <img id="modal-image" src="id.jpg" alt="Photo" style="width: 50%;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">رقم الضمان الاجتماعي</label>
+                <input class="input-field" type="text" id="name" name="name" required placeholder="ادخل رقم الضمان الاجتماعي" maxlength="12">
+                <span class="error-message" id="name-error"></span>
+            </div>
+            <div id="photo-modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="close-photo2">&times;</span>
+                    <img id="modal-image2" src="chifaa.jpg" alt="Photo" style="width: 50%;">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="wilaya">الولاية :</label>
+                <input  class="input-field" type="text" id="wilaya" name="wilaya" placeholder="الولاية" required>
+                </div>
+                <div class="form-group">
+                 <label for="phone" style="display: block; margin-top: 10px;">رقم الهاتف المحمول:</label>
+                    <input class="input-field" type="tel" id="phone" name="phone" required placeholder="ادخل رقم الهاتف المحمول" maxlength="10" pattern="\d{10}" title="رقم الهاتف يجب أن يحتوي على 10 أرقام فقط.">
+                    
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+                
+            <button type="submit" class="submit-button" onclick="showForm3()">متابعة</button>
+            <button type="submit" class="submit-button1" onclick="showForm1()">تعديل </button>
+    </div>
+    <div id="form3" class="container" >
+        <h1 class="form_titles">تم التسجيل بنجاح ✓</h1>
+        <section class="about" id="about">
+            <div class="row">
+                <div class="content">
+                <p class="first-paragraph">
+                   شكرا على المشاركة سيتم دراسة الملف وموافاتكم بالمستجدات في حالة الموافقة 
+                </p>
+               <p>
+              بامكانكم طباعة وصل التسجيل الاولي على المنصة:
+            </p>
+                    <a href="hm.html" class="btn">طباعة</a>
+                </div>
+            </div>
+        </section>
+    </div>
+        <div class="progress-container">
+            <div class="progress-step completed" id="step1">1</div>
+            <div class="progress-bar" id="progressBar"></div>
+            <div class="progress-step" id="step2">2</div>
+            <div class="progress-bar" id="progressBar1"></div>
+            <div class="progress-step" id="step3">3</div>
+    </div>
+
+    <script src="ihm2.js"></script>
+</body>
+</html>
